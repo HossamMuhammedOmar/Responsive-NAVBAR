@@ -16,6 +16,7 @@ h1 {
   color: #1792d2;
   font-weight: 700;
   text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 nav a {
@@ -49,8 +50,16 @@ body {
   font-family: "Ubuntu", sans-serif;
 }
 
+.container {
+  display: flex;
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: center;
+}
+
 header {
-  text-align: center;
   background-color: #f8f8f8;
   padding: 2em 0;
 }
@@ -63,5 +72,24 @@ nav ul {
 }
 
 nav li {
-  margin: 0 1em;
+  margin-left: 2em;
+}
+
+.logo {
+  text-align: center;
+}
+
+@media (max-width: 750px) {
+  .container {
+    flex-direction: column;
+  }
+
+  nav ul {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav li {
+    margin: 0.5em;
+  }
 }
